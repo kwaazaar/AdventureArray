@@ -9,7 +9,7 @@ namespace AdventureArray.Infrastructure.AppHost.Extensions.Kafka;
 [SuppressMessage("ReSharper", "ClassNeverInstantiated.Global")]
 internal sealed class KafkaTopicCreatorHook : IDistributedApplicationLifecycleHook
 {
-	private static readonly TimeSpan RetryDelay = TimeSpan.FromMilliseconds(250);
+	private static readonly TimeSpan RetryDelay = TimeSpan.FromSeconds(1);
 
 	private readonly ILogger<KafkaTopicCreatorHook> _logger;
 
